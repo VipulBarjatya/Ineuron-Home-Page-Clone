@@ -44,9 +44,11 @@ btnNavEl.addEventListener("click", function () {
 
 // relax js code
 
-let rellax = new Rellax(".rellax", {
-  center: true,
-});
+if (window.innerWidth > 568) {
+  let rellax = new Rellax(".rellax", {
+    center: true,
+  });
+}
 
 console.log("hello World!");
 // sticky nav

@@ -175,6 +175,7 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     background-color: #E9ECF2;
     /* to make it sticky later */
     height: 9.6rem;
@@ -913,7 +914,6 @@ a:active {
 .mentors-desc {
     font-size: 1.6rem;
     line-height: 1.5;
-    width: 60rem;
     color: #888;
 
 }
@@ -922,6 +922,10 @@ a:active {
     width: 100%;
     margin: 0 auto;
 
+}
+
+.collage-2 {
+    display: none;
 }
 
 
@@ -1391,6 +1395,22 @@ iframe {
 
 @media(max-width: 88em) {
 
+
+    /* sticky issue */
+
+    .sticky .header {
+        position: static !important;
+        width: 100%;
+        height: 0rem !important;
+        background-color: #E9ECF2 !important;
+        z-index: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .sticky .section-hero {
+        margin-top: 0rem;
+    }
+
     .btn-mobile-nav {
         display: block;
     }
@@ -1548,6 +1568,11 @@ iframe {
 
         margin-right: .1rem;
     }
+
+
+    /* .sticky .header {
+        display: none;
+    } */
 }
 
 /*************************/
@@ -1555,7 +1580,7 @@ iframe {
 /*************************/
 @media (max-width: 75em) {
     html {
-        font-size: 56.25%;
+        font-size: 65.25%;
     }
 
     .testimonials-sub-title {
@@ -1574,14 +1599,14 @@ iframe {
 
 @media (max-width: 66em) {
     html {
-        font-size: 50.25%;
+        font-size: 56.25%;
     }
 }
 
 @media (max-width: 58em) {
-    html {
+    /* html {
         font-size: 48%;
-    }
+    } */
 
     .hero {
         grid-template-columns: 1fr;
@@ -1590,8 +1615,8 @@ iframe {
     .section-hero {
         background-color: #E9ECF2;
         padding: 7.2rem 0 0rem 0;
-        border-bottom-left-radius: 15rem;
-        border-bottom-right-radius: 15rem;
+        /* border-bottom-left-radius: 15rem;
+        border-bottom-right-radius: 15rem; */
     }
 
     .hero-text-box {
@@ -1611,8 +1636,8 @@ iframe {
         padding: 4rem 0 4rem 1rem;
         background-color: #E9ECF2;
         border-top-left-radius: 0;
-        border-bottom-left-radius: 15rem;
-        border-bottom-right-radius: 15rem;
+        /* border-bottom-left-radius: 15rem;
+        border-bottom-right-radius: 15rem; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1653,12 +1678,62 @@ iframe {
 /*************************/
 
 @media (max-width:40em) {
-    html {
+    /* html {
         font-size: 44%;
+    } */
+
+    .heading {
+        text-align: center;
+    }
+
+    .sub-heading {
+        text-align: center;
+    }
+
+    .para {
+        text-align: center;
+    }
+
+    .section-top {
+        grid-template-columns: 1fr;
+    }
+
+    .section-course-banner {
+        background-color: #E9ECF2;
+        padding: .2rem 0;
+    }
+
+
+    .section-top-callout .box {
+        text-align: center;
+        width: 90%;
+        font-size: 2rem;
+        margin: 4rem auto 0rem auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .callout-btn:link,
+    .callout-btn:visited {
+        font-size: 2.4rem;
+        margin: 1rem 0;
+    }
+
+
+    .callout-btn:hover,
+    .callout-btn:active {
+        background-color: #233c7c;
+        color: #fe9810;
     }
 
     .cta {
         grid-template-columns: 55% 45%;
+    }
+
+    .course-text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -1666,7 +1741,7 @@ iframe {
         position: absolute;
         top: 0;
         left: 0;
-        width: 120%;
+        width: 150%;
         z-index: -1;
         transform: scalex(-1);
     }
@@ -1675,6 +1750,28 @@ iframe {
     .carousel {
         margin: 1rem auto;
         width: 95%;
+    }
+
+    .stats {
+        display: none;
+    }
+
+    .stat {
+        margin: 0rem;
+
+    }
+
+    .stat-img {
+        height: 10rem;
+    }
+
+    .border-stat {
+        width: 60%;
+        padding: 6rem 0;
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid rgba(153, 153, 153, 0.3);
+        border-bottom: 2px solid rgba(153, 153, 153, 0.3);
     }
 
     /* .course-images {
@@ -1715,22 +1812,42 @@ iframe {
         grid-template-columns: 1fr;
     }
 
+    .collage-1 {
+        display: none;
+    }
+
+    .collage-2 {
+        display: block;
+    }
+
 
     .course-text-box {
         grid-row: 1;
     }
 
     .course-images {
-        width: 80%;
-        margin: 0 6rem;
+        width: 90%;
+        margin: 0 3rem;
     }
+
+    .hackathon-details {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hackathon-desc {
+        padding-right: 0;
+    }
+
+    .cta {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width:32em) {
-    .stats {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
+
 
     .stat {
         margin: 0rem;
@@ -1749,50 +1866,27 @@ iframe {
         border-bottom: 2px solid rgba(153, 153, 153, 0.3);
     }
 
-    .section-course-banner {
-        background-color: #E9ECF2;
-        padding: .2rem 0;
+    .course-images {
+        width: 95%;
+        margin: 0 2rem;
     }
 
 
-
-    .section-top {
-        grid-template-columns: 1fr;
-    }
-
-    .section-top-callout .box {
-        width: 75%;
-        margin: 4rem auto;
-    }
-
-
-    .callout-btn:link,
-    .callout-btn:visited {
-        font-size: 2.4rem;
-        margin: 1rem 0;
-    }
-
-
-    .callout-btn:hover,
-    .callout-btn:active {
-        background-color: #233c7c;
-        color: #fe9810;
-    }
 
 
     .back-video {
         position: absolute;
         top: 0;
         left: 0;
-        width: 180%;
+        width: 250%;
         z-index: -1;
         transform: scalex(-1);
     }
 
-
-    .hackathon-details {
-        grid-template-columns: 1fr;
+    .section-featured {
+        padding: 3rem 0 1rem 0;
     }
+
 
 
     .hackathon-video {
