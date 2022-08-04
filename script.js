@@ -50,6 +50,14 @@ if (window.innerWidth > 568) {
   });
 }
 
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 568) {
+    let rellax = new Rellax(".rellax", {
+      center: true,
+    });
+  }
+});
+
 console.log("hello World!");
 // sticky nav
 const sectionHeroEl = document.querySelector(".section-hero");

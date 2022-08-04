@@ -1678,9 +1678,9 @@ iframe {
 /*************************/
 
 @media (max-width:40em) {
-    /* html {
-        font-size: 44%;
-    } */
+    html {
+        font-size: 48%;
+    }
 
     .heading {
         text-align: center;
@@ -1867,8 +1867,8 @@ iframe {
     }
 
     .course-images {
-        width: 95%;
-        margin: 0 2rem;
+        width: 98%;
+        margin: 0 1rem;
     }
 
 
